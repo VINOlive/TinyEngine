@@ -40,8 +40,8 @@ static const int MENU_SPACE		 = 10;
 static const int MENU_ALPHA		 = 180;
 static const COLORREF MENU_BKCLR = RGB(0, 0, 0);
 static const int LAYER_MAX		 = 1000;
-static const LPCTSTR WIN_CLASS	 = TEXT("TinyEngine");
-static const LPCTSTR WIN_TITLE	 = TEXT("TinyEngine Ver 1.0 作者:方杰(C) 20014-");
+static const LPCTSTR WIN_CLASS	 = TEXT("JayEngine");
+static const LPCTSTR WIN_TITLE	 = TEXT("JayEngine Ver 1.0 作者:方杰(C) 20014-");
 
 enum GAME_DIR
 {

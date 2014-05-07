@@ -51,7 +51,7 @@ protected:
 	LONG ex_style;
 	//T_Display指针
 	T_Display* p_disp;
-	//游戏帧频间隔(一帧的时间间隔)
+	//游戏帧频间隔
 	int IntervalTime;
 	//屏幕是否睡眠
 	BOOL isAsleep;

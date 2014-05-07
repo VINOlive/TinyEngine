@@ -26,7 +26,7 @@ T_Engine* T_Engine::pEngine=NULL;
 T_Engine::T_Engine(HINSTANCE hInstance, LPCTSTR szWindowClass, LPCTSTR szTitle,WORD Icon, WORD SmIcon, 
 		 int iWidth, int iHeight)
 {
-	//GDI+设置
+	//GDI+设置  ??
 	Gdiplus::GdiplusStartupInput gdiplusStartupInput;
 	Gdiplus::GdiplusStartup(&ptrGdiplusToken,&gdiplusStartupInput,NULL);
 
@@ -80,11 +80,10 @@ void T_Engine::StartEngine()
 		{
 			if(!GetSleep())
 			{
-				//程序运行到目前的时间
+
 				nowTick=GetTickCount();
 				if(nowTick>TickElaspsed)
 				{
-					//程序运行到现在+帧频时间
 					TickElaspsed=nowTick+GetInterval();
 					GameLogic();
 					GamePaint(bufferDC);
