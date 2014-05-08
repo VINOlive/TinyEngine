@@ -15,12 +15,13 @@
 *	实验时间：2014-03-21 16:10-18:00
  ==========================================================*/
 #include "T_Engine.h"
+#include "T_Menu.h"
 
 class GameTest:public T_Engine{
 public:
 	int wnd_width,wnd_height;
-	HBITMAP hBitmap;
-	int frameCount;
+	T_Menu t_menu;
+
 
 public:
 	GameTest(HINSTANCE hInstance, LPCTSTR szWindowClass, LPCTSTR szTitle,WORD Icon, WORD SmIcon, int iWidth, int iHeight);
@@ -32,7 +33,5 @@ public:
 	void GamePaint(HDC hdc);
 	void GameKeyAction(int ActionType=KEY_SYS_NONE);
 	void GameMouseAction(int x, int y, int ActionType);
-
-
 };
 

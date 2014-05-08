@@ -346,18 +346,18 @@ void T_Graph::PaintBlank(HDC hdc, int x, int y, int width, int height,
 	DeleteObject(hbrush);
 }
 
-void T_Graph::PaintText(HDC hdc, RectF fontRect, LPCTSTR text, 
-		REAL fontSize, LPCTSTR fontName, 
-		Color fontColor,
-		FontStyle style, 
-		StringAlignment align)
+void T_Graph::PaintText(HDC hdc ,RectF fontRect,LPCTSTR text,
+						REAL fontSize,LPCTSTR fontName,Color fontColor,
+						FontStyle style,StringAlignment align )
 {
-
-}
-void T_Graph::PaintText(HDC hdc, LPTSTR text, RECT fontRect, 
-		int fontSize, LPCTSTR fontName, 
-		COLORREF fontColor , 
-		bool bold, int align)
-{
-
+	Graphics graph(hdc);
+	FontFamily fontFamily(fontName);
+	Font font(&fontFamily,fontSize,style,UnitPoint);
+	StringFormat format;
+	format.SetLineAlignment(StringAlignmentCenter);
+	format.SetAlignment(align);
+	SolidBrush solidBrush1(fontColor);
+	graph.SetTextRenderingHint(TextRenderingHintAntiAlias);
+	graph.DrawString(text,(INT)wcslen(text),&font,fontRect,&format,&solidBrush1);
+	graph.ReleaseHDC(hdc);
 }
