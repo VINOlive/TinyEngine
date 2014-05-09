@@ -288,7 +288,7 @@ void T_Graph::PaintFrame(HBITMAP in_hbitmap, HDC destDC, int destX, int destY,
 		int FrameCount, int RowFrames, int wFrame, int hFrame, 
 		float ratio, int rotType, BYTE alpha)
 {
-	int col=FrameCount;
+	int col=FrameCount%RowFrames;
 	int row=(FrameCount-col)/RowFrames;
 	PaintRegion(in_hbitmap,destDC,destX,destY,col*wFrame,row*hFrame,wFrame,hFrame,ratio,rotType,alpha);
 }
