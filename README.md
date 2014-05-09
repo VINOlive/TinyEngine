@@ -4,6 +4,8 @@ TinyEngine
 学校的《Windows游戏编程》课程，Win32项目，利用Windows SDK构建一个微型游戏引擎！<br/>
 注：代码仅供学习，版权归我的老师：[万立中](http://www.wanlizhong.com)所有，因为老师已经就内容出书：[《游戏程序设计教程》](http://product.dangdang.com/23413918.html?_ddclickunion=400-kw-%CD%BC%CA%E9-%CA%E9%C3%FB%B4%CA_%BD%CC%B2%C4_|ad_type=0|sys_id=1)。
 
+![TinyEngine](http://fangjie.sinaapp.com/upload/images/TinyEngine.png "TinyEngine")  
+
 ### T_Engine - 所有引擎类的基类
 主要做游戏主窗口的事件处理，所有的引擎必须继承该父类，并实现其中的纯虚函数。该类拥有一个本类实例指针的成员变量。
 
