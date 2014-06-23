@@ -1,8 +1,11 @@
-TinyEngine
+﻿TinyEngine
 ==========
 
 学校的《Windows游戏编程》课程，Win32项目，利用Windows SDK构建一个微型游戏引擎！<br/>
 注：代码仅供学习，版权归我的老师：[万立中](http://www.wanlizhong.com)所有，因为老师已经就内容出书：[《游戏程序设计教程》](http://product.dangdang.com/23413918.html?_ddclickunion=400-kw-%CD%BC%CA%E9-%CA%E9%C3%FB%B4%CA_%BD%CC%B2%C4_|ad_type=0|sys_id=1)。
+
+TinyEngine引擎主要类解释
+------------------------
 
 ![TinyEngine](http://fangjie.sinaapp.com/upload/images/TinyEngine.jpg "TinyEngine")  
 
@@ -30,7 +33,16 @@ TinyEngine
 ### T_AI - AI类
 该类处理游戏角色的智能行为，躲避、碰撞检测等。
 
-### GameTest - 游戏测试类
-该类继承自T_Engine类，并实现其纯虚函数。
+### T_Scene-游戏场景类
+该类负责管理T_Sprite和T_Map类
+
+### T_Audio-游戏音频类
+该类主要操作游戏的音频播放、暂停、继续，用到了DirectX库
+
+
+使用该TinyEngine开发的飞机大战
+------------------------------
+飞机大战是仿微信飞机大战开发的游戏。利用VS2008开发，Win32项目。可以直接打开FlyGame.exe文件试玩。
+
 
 by：[JayFang](http://fangjie.sinaapp.com)
