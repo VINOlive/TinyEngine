@@ -1,14 +1,15 @@
 //*******************************************************************
 // TinyEngine引擎  
-// 作者: 方杰
-// 博客: http://fangjie.sinaapp.com
-// 日期: 2014-4-17
-// 版权所有 2014-  方杰
-// (C) 2014- JayFang All Rights Reserved
+// 作者: 万立中(WanLizhong)
+// 博客: www.wanlizhong.com 
+// 日期: 2013-08-02
+// 版权所有 2007-2013 万立中
+// (C) 2007-2013 WanLizhong All Rights Reserved
 //*******************************************************************
 
 #pragma once
 #include "T_Graph.h"
+#include "T_Map.h"
 #include "T_Layer.h"
 #include "T_Util.h"
 
@@ -94,13 +95,11 @@ public:
 	void AdjustCollideRect(int px=0, int py=0);	
 	RECT* GetCollideRect();	
 	bool CollideWith(T_Sprite* target, int distance=0);
-
-	//bool CollideWith(IN T_Map* map);	
+	bool CollideWith(IN T_Map* map);	
 	POINT GetMapBlockPT(){ return mapBlockPT; }				
 
 	void LoopFrame(bool ahead = true);
-	bool LoopFrameOnce(bool ahead = true);	
-			
+	bool LoopFrameOnce(bool ahead = true);				
 	int GetRawFrames(){ return rawFrames; }	
 	int GetTotalFrames(){ return totalFrames; }			
 
@@ -128,7 +127,7 @@ public:
 
 	int GetDir(POINT mousePT);							
 	bool MoveTo(IN POINT mousePT, IN POINT desPT, IN RECT Boundary);
-	//bool MoveTo(IN POINT mousePT, IN POINT desPT, IN T_Map* map);	
+	bool MoveTo(IN POINT mousePT, IN POINT desPT, IN T_Map* map);	
 
 	void Initiate(SPRITEINFO spInfo);
 	void Draw(HDC hdc);	

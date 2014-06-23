@@ -9,15 +9,36 @@
 
 #include "T_Util.h"
 
-//根据输入的三个参数所指定的起点、终点坐标和移动速度
-//如果要保持两点直线移动且长边速度为指定移动速度
-//本函数计算出短边对应的分量速度
-//xRatio与yRatio为输出参数, 即最终计算结果
-//本函数会自动判断方向：
-//	xRatio、yRatio为正值，表示朝右、下移动
-//	xRatio、yRatio为负值，表示朝左、上移动
+wchar_t * T_Util::int_to_wstring(int i)
+{
+	wchar_t *w_str;
+	w_str = new wchar_t[20];
+	if(!w_str)
+	{
+		delete []w_str;
+		return NULL;
+	}
+	swprintf(w_str, 20, L"%d ", i);
+	return w_str;
+}
+
+void T_Util::GetRandomNum(int range, int* iArray)
+{
+	int i;
+	srand((unsigned)time(NULL));	
+	for(i=0; i<range; ++i) 
+	{
+		iArray[i]=i;
+	}
+	for(i=range; i>0; --i) 
+	{
+		int r = rand()%i;
+		swap(iArray[i-1], iArray[r]);
+	}
+}
+
 void T_Util::GetBevelSpeed(IN POINT startPT, IN POINT destPT, IN int Speed, 
-			   OUT int& xRatio, OUT int& yRatio)
+						   OUT int& xRatio, OUT int& yRatio)
 {
 	float aX,bY;
 	if(destPT.x > startPT.x)

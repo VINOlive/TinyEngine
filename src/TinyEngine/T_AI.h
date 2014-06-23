@@ -1,15 +1,16 @@
 //*******************************************************************
 // TinyEngine引擎  
-// 作者: 方杰
-// 博客: http://fangjie.sinaapp.com
-// 日期: 2014-4-17
-// 版权所有 2014-  方杰
-// (C) 2014- JayFang All Rights Reserved
+// 作者: 万立中(WanLizhong)
+// 博客: www.wanlizhong.com 
+// 日期: 2013-08-02
+// 版权所有 2007-2013 万立中
+// (C) 2007-2013 WanLizhong All Rights Reserved
 //*******************************************************************
 
 #pragma once
 #include "T_Config.h"
 #include "T_Sprite.h"
+#include "T_Map.h"
 
 struct MoveCoord
 {
@@ -33,6 +34,7 @@ public:
 	void GetHitRect(IN T_Sprite* sp, IN int spSizeTimes, OUT RECT& testRec);
 	MoveCoord GetMoveCoord(T_Sprite* npc_sp, int dir, int speed, RECT boundary);
 	void Wander(T_Sprite* npc_sp, int npc_dir, int speed, RECT boundary);
+	void Wander(T_Sprite* npc_sp, int npc_dir, int speed, T_Map* map);
 	void Evade(T_Sprite* npc_sp, T_Sprite* player);
 	void CheckOverlay(T_Sprite* npc_sp, vector<T_Sprite*> vSpriteSet);
 };

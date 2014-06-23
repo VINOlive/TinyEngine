@@ -1,19 +1,12 @@
-/* ========================================================== 
-*	文 件 名：T_Config.cpp
-*	当前版本：1.0.0
-*	创建时间：2014-03-14 
-*	修改时间：2014-03-14
-*	功能说明：游戏引擎类实现
-*	编译环境：VS2008
-*
-*	班    级：东软实验111班
-*	姓    名：方杰
-*	学    号：8000611063
-*	实验名称：类与对象
-*	实验序号：
-*	实验地点：图书馆406
-*	实验时间：2014-03-14 16:10-18:00
- ==========================================================*/
+//*******************************************************************
+// TinyEngine引擎  
+// 作者: 万立中(WanLizhong)
+// 博客: www.wanlizhong.com 
+// 日期: 2013-08-02
+// 版权所有 2007-2013 万立中
+// (C) 2007-2013 WanLizhong All Rights Reserved
+//*******************************************************************
+
 #ifndef TCONFIG_H
 #define TCONFIG_H
 
@@ -40,8 +33,8 @@ static const int MENU_SPACE		 = 10;
 static const int MENU_ALPHA		 = 180;
 static const COLORREF MENU_BKCLR = RGB(0, 0, 0);
 static const int LAYER_MAX		 = 1000;
-static const LPCTSTR WIN_CLASS	 = TEXT("JayEngine");
-static const LPCTSTR WIN_TITLE	 = TEXT("JayEngine Ver 1.0 作者:方杰(C) 20014-");
+static const LPCTSTR WIN_CLASS	 = TEXT("TinyEngine");
+static const LPCTSTR WIN_TITLE	 = TEXT("TinyEngine Ver 1.0 作者:万立中(C) 2007-2013");
 
 enum GAME_DIR
 {
